@@ -1,0 +1,103 @@
+<div class="container">
+
+ <!--     agregar input de edad y sexo              -->
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <app-tabla-paises> </app-tabla-paises>
+        </div>
+
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Billing address</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Apellido</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="edad">Edad</label>
+            <input type="number" class="form-control" id="edad" placeholder="Ingrese edad">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+<!--             <small class="invalid" *ngIf="formGroup.get('edad').errors?.required && formGroup.get('edad').touched">La edad es requerida</small>
+            <small class="invalid" *ngIf="formGroup.get('edad').errors?.min || formGroup.get('edad').errors?.max && formGroup.get('edad').touched">La edad debe estar entre 18 o 99 años.</small> -->
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <label for="sexo" class="form-label">Sexo</label>
+            <select class="form-select" id="sexo">
+              <option value="">Seleccione uno</option>
+              <option value="F">Femenino</option>
+              <option value="M">Masculino</option>
+            </select>
+            <!-- <small class="invalid" *ngIf="formGroup.get('sexo').errors?.required && formGroup.get('sexo').touched">El sexo es requerido</small> -->
+          </div>
+
+
+
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address for shipping updates.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">Direccion</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country">Country</label>
+              <select class="custom-select d-block w-100" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="state">State</label>
+              <select class="custom-select d-block w-100" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
